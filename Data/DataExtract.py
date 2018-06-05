@@ -5,4 +5,5 @@ def requestData(link):
         data = json.loads(url.read().decode())
         return data
 
-print(requestData("http://opendata.cbs.nl/ODataApi/OData/81975NED/UntypedDataSet"))
+if __name__ == "__main__":
+    print(requestData("http://opendata.cbs.nl/ODataApi/OData/81975NED/UntypedDataSet"))
