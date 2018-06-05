@@ -1,0 +1,22 @@
+import json
+print(json.loads("""{
+  "odata.metadata":"http://opendata.cbs.nl/ODataApi/OData/81975NED/$metadata","value":[
+    {
+      "name":"TableInfos","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/TableInfos"
+    },{
+      "name":"UntypedDataSet","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/UntypedDataSet"
+    },{
+      "name":"TypedDataSet","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/TypedDataSet"
+    },{
+      "name":"DataProperties","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/DataProperties"
+    },{
+      "name":"CategoryGroups","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/CategoryGroups"
+    },{
+      "name":"Afzet","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/Afzet"
+    },{
+      "name":"BedrijfstakkenBranchesSBI2008","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/BedrijfstakkenBranchesSBI2008"
+    },{
+      "name":"Perioden","url":"http://opendata.cbs.nl/ODataApi/OData/81975NED/Perioden"
+    }
+  ]
+}"""))
