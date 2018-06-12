@@ -11,8 +11,8 @@ def average():
     N = {}
     filepaths = []
 
-    for file in os.listdir("../Data/DataFrames_Afzet_Branches"):
-        filepaths.append(os.path.join("../Data/DataFrames_Afzet_Branches", file))
+    for file in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches"):
+        filepaths.append(os.path.join("../Data/DataFrames/DataFrames_Afzet_Branches", file))
 
     for path in filepaths:
         if path[-2:] == "A6":
