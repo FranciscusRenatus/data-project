@@ -3,31 +3,38 @@ import numpy as np
 import matplotlib.pyplot as plt
 import os
 
-filepaths = []
-
-for file in os.listdir("../Data/DataFrames_Afzet_Branches"):
-    filepaths.append(os.path.join("../Data/DataFrames_Afzet_Branches", file))
-
 def month(string):
     return int(string[:4]) + int(string[-2:])/12
 
-X = {}
-N = {}
+def average():
+    X = {}
+    N = {}
+    filepaths = []
 
-for path in filepaths:
-    df = pd.read_csv(path)
-    for i,prijs in enumerate(df["ProducentenprijsindexPPI_1"].tolist()):
-        datum = month(df["Perioden"][i])
-        if datum in X:
-            X[datum] += prijs
-        else:
-            X[datum] = prijs
-        if datum in N:
-            N[datum] += 1
-        else:
-            N[datum] = 1
-for datum in X:
-    X[datum] = X[datum]/N[datum]
-    
-plt.plot([x for x,y in sorted(zip(X,X.values()))],[y for x,y in sorted(zip(X,X.values()))])
-plt.savefig("figures/average")
+    for file in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches"):
+        filepaths.append(os.path.join("../Data/DataFrames/DataFrames_Afzet_Branches", file))
+
+    for path in filepaths:
+        if path[-2:] == "A6":
+            df = pd.read_csv(path)
+            for i,prijs in enumerate(df["ProducentenprijsindexPPI_1"].tolist()):
+                datum = month(df["Perioden"][i])
+                if datum in X:
+                    X[datum] += prijs
+                else:
+                    X[datum] = prijs
+                if datum in N:
+                    N[datum] += 1
+                else:
+                    N[datum] = 1
+    for datum in X:
+        X[datum] = X[datum]/N[datum]
+    return X
+
+if __name__ == "__main__":
+    AVG = average()
+    X = [x for x,y in sorted(zip(AVG,AVG.values()))]
+    Y = [y for x,y in sorted(zip(AVG,AVG.values()))]
+    plt.plot(X,Y)
+    plt.plot([X[0]]+[X[-1]],[Y[0]]+[Y[-1]])
+    plt.savefig("figures/A6average")
