@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 maanddf = pd.read_csv("../data/maanddf.csv")
 
-dit = dict({})
+dit = {}
 # able to make more than 20 graphs at one time
 plt.rcParams.update({'figure.max_open_warning': 0})
 for bedrijfkey in maanddf.BedrijfstakkenBranchesSBI2008.unique():
