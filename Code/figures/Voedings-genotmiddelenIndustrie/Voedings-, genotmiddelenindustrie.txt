@@ -1,0 +1,318 @@
+
+10-12 Voedings-, genotmiddelenindustrie:
+Vervaardiging van voedingsmiddelen, dranken en tabaksproducten
+Deze categorie is een samentelling van categorieën:
+10 Vervaardiging van voedingsmiddelen
+11 Vervaardiging van dranken
+12 Vervaardiging van tabaksproducten
+
+ ---------- 
+
+10 Voedingsmiddelenindustrie:
+Vervaardiging van voedingsmiddelen
+
+
+103 Groente-, fruitverwerkende industrie:
+Verwerking van aardappels, groente en fruit
+Deze groep omvat:
+10.31 Vervaardiging van aardappelproducten
+10.32 Vervaardiging van fruit- en groentesap
+10.39 Verwerking van groente en fruit (niet tot sap en maaltijden)
+
+ ---------- 
+
+1031 Aardappelproductenindustrie:
+Vervaardiging van aardappelproducten
+Deze klasse omvat:
+- vervaardiging van bereide, bevroren aardappelen;
+- vervaardiging van gedehydreerde aardappelpuree;
+- vervaardiging van chips;
+- vervaardiging van voorgebakken frites en andere aardappelproducten;
+- vervaardiging van aardappelsalades en -snacks;
+- vervaardiging van meel en gries van aardappelen;
+- industrieel schillen van aardappelen.
+
+ ---------- 
+
+1032 Fruit- en groentesappenindustrie:
+Vervaardiging van fruit- en groentesap
+Deze klasse omvat:
+- vervaardiging van geconcentreerd groente- en vruchtensap en van vruchtennectar. 
+
+Deze klasse omvat niet:
+- vervaardiging van vruchtensiroop (11.07).
+
+ ---------- 
+
+1039 Groente-,fruitverwerkende industrie:
+Verwerking van groente en fruit (niet tot sap en maaltijden)
+Deze klasse omvat:
+- conservering van groenten en fruit: bevriezen, drogen, inleggen in olie of azijn, inblikken, enz.; 
+- vervaardiging van uit groenten of fruit bestaande voedingsmiddelen;
+- vervaardiging van jam, marmelade en gelei;
+- roosteren van noten;
+- in loon verrichten van allerlei deelbewerkingen aan groente en fruit, zoals: het wellen van rozijnen, industrieel schillen van groente en fruit, het ontschillen en ontvliezen van pinda's. 
+
+Deze klasse omvat niet:
+- vervaardiging van groente- en vruchtensap (10.32);
+- vervaardiging van meel of gries van gedroogde peulvruchten (10.61);
+- vervaardiging van konfijten van vruchten en vruchtenschillen (10.82.2);
+- vervaardiging van tomatenketchup en andere sausen op basis van groente en fruit (10.84);
+- vervaardiging van kant-en-klaarmaaltijden, snacks en salades die groente bevatten (10.85); 
+- vervaardiging van groentesoep (10.89).
+
+ ---------- 
+
+104 Spijsoliën- en -vettenindustrie e.d.:
+Vervaardiging van plantaardige en dierlijke oliën en vetten
+Deze klasse omvat:
+- vervaardiging van ruwe plantaardige oliën:
+  w.o. olijf-, soja-, palm-, zonnebloemzaad-, katoenzaadolie, raap-, kool- en mosterdzaadolie, lijnolie, enz.;
+- vervaardiging van dierlijke oliën en vetten ongeschikt voor menselijke consumptie;
+- extractie van olie uit vis en zeezoogdieren; 
+- raffinage van plantaardige oliën:
+  w.o. olijfolie, sojaolie, palm-, zonnebloemzaad-, katoenzaadolie, raap-, kool- en mosterdzaadolie, lijnolie, enz.;
+- behandeling van plantaardige oliën:
+  w.o. blazen, koken, oxideren, polymeriseren, dehydreren, hydrogeneren, enz.
+
+Deze klasse omvat niet:
+- smelten en raffineren van reuzel en andere dierlijke vetten geschikt voor menselijke consumptie (10.11); 
+- natmaling van maïs (10.62);
+- vervaardiging van etherische oliën (20.53); 
+- behandeling van plantaardige en dierlijke oliën en vetten via chemische processen (20.59).
+
+ ---------- 
+
+1041 Spijsoliën- en -vettenindustrie:
+Vervaardiging van plantaardige en dierlijke oliën en vetten (geen margarine en andere spijsvetten)
+Deze klasse omvat:
+- vervaardiging van ruwe plantaardige oliën:
+  w.o. olijf-, soja-, palm-, zonnebloemzaad-, katoenzaadolie, raap-, kool- en mosterdzaadolie, lijnolie, enz.;
+- vervaardiging van dierlijke oliën en vetten ongeschikt voor menselijke consumptie;
+- extractie van olie uit vis en zeezoogdieren; 
+- raffinage van plantaardige oliën:
+  w.o. olijfolie, sojaolie, palm-, zonnebloemzaad-, katoenzaadolie, raap-, kool- en mosterdzaadolie, lijnolie, enz.;
+- behandeling van plantaardige oliën:
+  w.o. blazen, koken, oxideren, polymeriseren, dehydreren, hydrogeneren, enz.;
+- vervaardiging van margarine en halvarine;
+- vervaardiging van mengsels van spijsvetten e.d.;
+- vervaardiging van samengesteld braadvet.
+
+Deze klasse omvat niet:
+- smelten en raffineren van reuzel en andere dierlijke vetten geschikt voor menselijke consumptie (10.11); 
+- vervaardiging van margarine (10.42);
+- natmaling van maïs (10.62);
+- vervaardiging van etherische oliën (20.53); 
+- behandeling van plantaardige en dierlijke oliën en vetten via chemische processen (20.59).
+
+ ---------- 
+
+105 Zuivelindustrie:
+Vervaardiging van zuivelproducten
+Deze groep omvat:
+- vervaardiging van verse, vloeibare melk, gepasteuriseerd, gesteriliseerd, gehomogeniseerd en/of ultrahoog verhit;
+- vervaardiging van room van verse vloeibare melk, gepasteuriseerd, gesteriliseerd en/of gehomogeniseerd;
+- vervaardiging van melkpoeder en ingedikte melk, ook indien met toegevoegde suiker of andere zoetstoffen; 
+- vervaardiging van melksuikers (lactose); 
+- vervaardiging van boter; 
+- vervaardiging van yoghurt;
+- vervaardiging van kaas en wrongel;
+Deze klasse omvat:
+- vervaardiging van roomijs en ander consumptie-ijs voor verkoop aan bedrijfsmatige gebruikers.
+
+Deze groep omvat niet:
+- vervaardiging van verse volle rauwe koemelk (01.41); 
+- vervaardiging van melk- en kaassubstituten (10.89).
+- vervaardiging van consumptie-ijs voor gebruik ter plekke (56.10.2)
+
+ ---------- 
+
+1051 Zuivelindustrie (geen ijs):
+Vervaardiging van zuivelproducten (geen consumptie-ijs)
+Deze klasse omvat:
+- vervaardiging van verse, vloeibare melk, gepasteuriseerd, gesteriliseerd, gehomogeniseerd en/of ultrahoog verhit;
+- vervaardiging van room van verse vloeibare melk, gepasteuriseerd, gesteriliseerd en/of gehomogeniseerd;
+- vervaardiging van melkpoeder en ingedikte melk, ook indien met toegevoegde suiker of andere zoetstoffen; 
+- vervaardiging van melksuikers (lactose); 
+- vervaardiging van boter; 
+- vervaardiging van yoghurt;
+- vervaardiging van kaas en wrongel. 
+
+Deze klasse omvat niet:
+- vervaardiging van verse volle rauwe koemelk (01.41); 
+- bereiding van consumptie-ijs (10.52);
+- vervaardiging van melk- en kaassubstituten (10.89).
+
+ ---------- 
+
+106 Meelindustrie:
+Vervaardiging van meel
+Deze groep omvat:
+- malen van granen tot:
+  w.o. meel, gries, griesmeel en pellets van tarwe, rogge, haver, maïs en overige granen; 
+- malen van rijst tot:
+  w.o. gepelde, geslepen, gepolijste, geglansde, voorgekookte (parboiled) of geconverteerde rijst;
+- vervaardiging van rijstemeel;
+- malen van groenten tot:
+  w.o. meel en gries van gedroogde peulvruchten, wortels, knollen, noten, geschikt voor menselijke consumptie;
+- vervaardiging van graanpreparaten voor het ontbijt;
+- vervaardiging van bereide meelmengsels uit zelfgemalen meel voor brood, cake, biscuits of pannenkoeken;
+- vervaardiging van stijfsel en zetmeel uit rijst, aardappelen, maïs, enz.;
+- vervaardiging van glucose (druivensuiker), glucosestroop, maltose, enz.;
+- vervaardiging van gluten;
+- vervaardiging van tapioca;
+- vervaardiging van maïsolie;
+- natmaling van maïs.
+
+Deze groep omvat niet:
+- vervaardiging van meel en gries van aardappelen (10.31);
+- vervaardiging van melksuikers (lactose) (10.51);
+- vervaardiging van riet- of bietsuiker (10.81);
+- vervaardiging van meelmengsels uit ingekocht meel voor brood, cake, biscuits of pannenkoeken (10.89).
+
+ ---------- 
+
+1061 Meelindustrie (geen zetmeel):
+Vervaardiging van meel (geen zetmeel)
+Deze klasse omvat:
+- malen van granen tot:
+  w.o. meel, gries, griesmeel en pellets van tarwe, rogge, haver, maïs en overige granen; 
+- malen van rijst tot:
+  w.o. gepelde, geslepen, gepolijste, geglansde, voorgekookte (parboiled) of geconverteerde rijst;
+- vervaardiging van rijstemeel;
+- malen van groenten tot:
+  w.o. meel en gries van gedroogde peulvruchten, wortels, knollen, noten, geschikt voor menselijke consumptie;
+- vervaardiging van graanpreparaten voor het ontbijt;
+- vervaardiging van bereide meelmengsels uit zelfgemalen meel voor brood, cake, biscuits of pannenkoeken. 
+
+Deze klasse omvat niet:
+- vervaardiging van meel en gries van aardappelen (10.31);
+- vervaardiging van meelmengsels uit ingekocht meel voor brood, cake, biscuits of pannenkoeken (10.89);
+- natmaling van maïs (10.62).
+
+ ---------- 
+
+107 Brood- en deegwarenindustrie:
+Vervaardiging van brood, banketbakkerswerk en deegwaren
+Deze groep omvat:
+- vervaardiging van brood, broodjes, croissants e.d.;
+- vervaardiging van natgebak, dagvers of diepgevroren;
+- vervaardiging van cakes, taarten en ander vers banket;
+- vervaardiging van bake-off producten;
+- vervaardiging van pannenkoeken (niet voor onmiddellijke consumptie);
+- vervaardiging van koekjes, wafels, snijkoek, taaitaai en ander houdbaar banket;
+- vervaardiging van beschuit, toast, geroosterd brood;
+- vervaardiging van ouwel;
+- vervaardiging van pasta's als macaroni en noedels al dan niet gekookt of gevuld;
+- vervaardiging van wraps en couscous.
+
+Deze groep omvat niet:
+- koude bakkers met eigen opwarmoven (47.24.1);
+- vervaardiging van pannenkoeken voor consumptie ter plekke (56.10.2);
+- vervaardiging van banket voor afzet via eigen lunchroom (56.10.2).
+
+ ---------- 
+
+1071 Brood- en banketbakkerijen:
+Vervaardiging van brood en vers banketbakkerswerk
+Deze klasse omvat:
+- vervaardiging van brood, broodjes, croissants e.d.;
+- vervaardiging van natgebak, dagvers of diepgevroren;
+- vervaardiging van cakes, taarten en ander vers banket;
+- vervaardiging van bake-off producten;
+- vervaardiging van pannenkoeken (niet voor onmiddellijke consumptie).
+
+Deze klasse omvat niet: 
+- vervaardiging van ander houdbaar banket (10.72);
+- vervaardiging van toast, geroosterd brood, beschuit (10.72);
+- vervaardiging van deegwaren (pasta's) (10.73);
+- koude bakkers met eigen opwarmoven (47.24.1);
+- vervaardiging van pannenkoeken voor consumptie ter plekke (56.10.2);
+- vervaardiging van banket voor afzet via eigen lunchroom (56.10.2).
+
+ ---------- 
+
+108 Overige voedingsmiddelenindustrie:
+Vervaardiging van overige voedingsmiddelen
+Deze groep omvat:
+- vervaardiging van suiker;
+- verwerking van cacao en vervaardiging van chocolade en suikerwerk;
+- verwerking van koffie en thee;
+- vervaardiging van specerijen, sauzen en kruiderijen; zoutraffinage;
+- vervaardiging van kant-en-klaarmaaltijden en snacks;
+- vervaardiging van gehomogeniseerde voedingspreparaten en dieetvoeding;
+- vervaardiging van overige voedingsmiddelen (rest).
+
+ ---------- 
+
+1081 Suikerindustrie:
+Vervaardiging van suiker
+Deze klasse omvat:
+- vervaardiging en raffinage van suiker uit het sap van suikerriet, suikerbieten en bepaalde ahornen en palmen;
+- vervaardiging van sacharosesuiker.
+
+Deze klasse omvat niet:
+- vervaardiging van glucose, glucosestroop en maltose (10.62);
+- vervaardiging van kunstmatige zoetstoffen (20.14.9).
+
+ ---------- 
+
+1082 Cacao- en chocoladewerkindustrie:
+Verwerking van cacao en vervaardiging van chocolade en suikerwerk
+
+ ---------- 
+
+109 Diervoederindustrie:
+Vervaardiging van diervoeders
+Deze klasse omvat:
+- vervaardiging van bereid veevoeder, inclusief toevoegingen aan het veevoeder;
+- bereiding van niet samengesteld (enkelvoudig) veevoeder;
+- vervaardiging van voer voor huisdieren: honden- en kattenvoer, vogelvoer enz.;
+- verwerking van kadavers en afvalstoffen tot voer voor huisdieren.
+
+Deze klasse omvat niet:
+- vervaardiging van vismeel voor veevoer (10.20);
+- vervaardiging van perskoeken (10.41);
+- vernietiging van kadavers (38.21).
+
+ ---------- 
+
+11 Drankenindustrie:
+Vervaardiging van dranken
+
+ ---------- 
+
+1102 Wijnindustrie (uit druiven):
+Vervaardiging van wijn uit druiven
+Deze klasse omvat: 
+- vervaardiging van wijn van niet-zelfgeteelde druiven.
+
+Deze klasse omvat niet:
+- bottelen van eigen dranken of voor derden (46.34 resp. 82.92).
+
+ ---------- 
+
+1107 Frisdrankindustrie:
+Vervaardiging van frisdranken; productie van mineraalwater en overig gebotteld water
+Deze klasse omvat:
+- bottelen van water, inclusief de productie van natuurlijk mineraalwater;
+- vervaardiging van frisdranken: limonade, sinas, cola, tonic, vruchtendranken, -siroop e.d.; 
+- vervaardiging van sport- en energiedranken.
+
+Deze klasse omvat niet:
+- vervaardiging van groente- en fruitsappen (10.32);
+- vervaardiging van zuiveldranken (10.51);
+- vervaardiging van limonadesiroop (10.89);
+- vervaardiging van alcoholhoudende dranken (11.01 -11.05);
+- vervaardiging van alcoholvrij en alcoholarm bier (11.05);
+- bottelen van eigen dranken of voor derden (46.34 resp. 82.92).
+
+ ---------- 
+
+12 Tabaksindustrie:
+Vervaardiging van tabaksproducten
+Deze afdeling omvat:
+- vervaardiging van sigaretten, shag, sigaren, pijptabak, pruimtabak, snuif;
+- vervaardiging van "gehomogeniseerde" en "gereconstitueerde" tabak.
+
+ ----------t tot maaltijden)
