@@ -18,7 +18,7 @@ for bedrijfkey in maanddf.BedrijfstakkenBranchesSBI2008.unique():
                 dit[item["Perioden"]] = item["ProducentenprijsindexPPI_1"]
             
         # convert dates to numbers
-        for datum in [int(datum[:4]) + int(datum[-2:])/12 for datum in bedrijfstak["Perioden"].tolist()]
+        [for datum in [int(datum[:4]) + int(datum[-2:])/12 for datum in bedrijfstak["Perioden"].tolist()]]
 
         # what the graph is plotted out against
         Y = bedrijfstak["ProducentenprijsindexPPI_1"].tolist()
@@ -50,8 +50,8 @@ ax1.plot(Xs,Ys)
 #             datum = int(item["Perioden"][:4]) + int(item["Perioden"][-2:])/12
 #             X.append(datum)
 #             Y.append(item["ProducentenprijsindexPPI_1"])
-#         ax1 = figure.add_subplot(110+i)
-#         ax1.plot(X,Y)
-#     size = figure.get_size_inches()
-#     figure.set_size_inches(size[0]*2,size[1]*2)
-#     figure.savefig("figures/" + titel, dpi = 1000, bbox_inches='tight')
+    #     ax1 = figure.add_subplot(110+i)
+    #     ax1.plot(X,Y)
+    # size = figure.get_size_inches()
+    # figure.set_size_inches(size[0]*2,size[1]*2)
+    # figure.savefig("figures/" + titel, dpi = 1000, bbox_inches='tight')
