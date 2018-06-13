@@ -29,7 +29,7 @@ for i,datum in enumerate(newDF2["Perioden"].tolist()):
         jaarlozenummers.append(i)
 
 CleanDF2 = newDF2.iloc[jaarlozenummers]
-CleanDF2 = CleanDF2.drop(columns=["Wegingcoefficient_4"])
+CleanDF2 = CleanDF2.drop("Wegingcoefficient_4",1)
 
 
 # branchnamen en id's in dictionary stoppen
@@ -38,16 +38,15 @@ pdBedrijfstakkenSBI = pd.DataFrame(dfBedrijfstakkenBranchesSBI2008["value"].toli
 branchNamen = pdBedrijfstakkenSBI[["Key","Title"]]
 
 # lege entries verwijderen en alle data opsplitsen per branch en afzet
-afzet = ["A4","A5","A6"]
 for i in branchNamen["Key"]:
-    BranchTemp = CleanDF2.loc[CleanDF2["BedrijfstakkenBranchesSBI2008"] == i]
-    BranchTemp = BranchTemp.interpolate()
-    BranchClean = BranchTemp.loc[(BranchTemp["OntwikkelingTOV1JaarEerder_2"].notnull()) | (BranchTemp["OntwikkelingTOV1MaandEerder_3"].notnull()) | (BranchTemp["ProducentenprijsindexPPI_1"].notnull())]
-    for k in afzet:
-        BranchCleanAfzet = BranchClean.loc[BranchClean["Afzet"] == k]
+    for k in ["A4","A5","A6"]:
+        BranchTemp = CleanDF2.loc[CleanDF2["BedrijfstakkenBranchesSBI2008"] == i]
+        BranchCleanAfzet = BranchTemp.loc[BranchTemp["Afzet"] == k]
         BranchCleanAfzet = BranchCleanAfzet.drop("Afzet", 1)
         BranchCleanAfzet = BranchCleanAfzet.drop("BedrijfstakkenBranchesSBI2008", 1)
         BranchCleanAfzet = BranchCleanAfzet.drop("ID", 1)
         BranchCleanAfzet = BranchCleanAfzet.drop("OntwikkelingTOV1JaarEerder_2", 1)
         BranchCleanAfzet = BranchCleanAfzet.drop("OntwikkelingTOV1MaandEerder_3", 1)
+        BranchCleanAfzet = BranchCleanAfzet.interpolate()
+        BranchCleanAfzet = BranchCleanAfzet.loc[BranchCleanAfzet["ProducentenprijsindexPPI_1"].notnull()]
         BranchCleanAfzet.to_csv(i + " - " + k)

@@ -1,57 +1,48 @@
 import pandas as pd
 import json
 import matplotlib.pyplot as plt
+import os
+import nationalaverage as avg
 
-maanddf = pd.read_csv("../data/maanddf.csv")
+def main():
+    # able to make more than 20 graphs at a time without a warning
+    plt.rcParams.update({'figure.max_open_warning': 0})
+    a = 4
+    n = 0
 
-dit = {}
-# able to make more than 20 graphs at one time
-plt.rcParams.update({'figure.max_open_warning': 0})
-for bedrijfkey in maanddf.BedrijfstakkenBranchesSBI2008.unique():
-    # alle data van deze bedrijfstak
-    bedrijfstak = maanddf.loc[maanddf["BedrijfstakkenBranchesSBI2008"] == bedrijfkey]
-    for afzet in ["A4","A5","A6"]:
-        tijdlijn = bedrijfstak.loc[bedrijfstak["Afzet"] == afzet]
-        for i in range(len(tijdlijn)):
-            item = tijdlijn.iloc[i]
-            if item["Perioden"] in dit:
-                dit[item["Perioden"]] = item["ProducentenprijsindexPPI_1"]
+    for file in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches"):
+        path = os.path.join("../Data/DataFrames/DataFrames_Afzet_Branches", file)
+        df = pd.read_csv(path)
+        graph = []
+
+        for i in range(len(df)):
+            item = df.iloc[i]
+            graph.append((item["Perioden"],item["ProducentenprijsindexPPI_1"]))
             
-        # convert dates to numbers
-        [for datum in [int(datum[:4]) + int(datum[-2:])/12 for datum in bedrijfstak["Perioden"].tolist()]]
+        X = [avg.month(x) for x,y in sorted(graph)]
+        Y = [y for x,y in sorted(graph)]
+        plt.figure(n)
+        plt.plot(X,Y, label = avg.titel("A"+str(a)))
 
-        # what the graph is plotted out against
-        Y = bedrijfstak["ProducentenprijsindexPPI_1"].tolist()
-    
-figure = plt.figure()
-ax1 = figure.add_subplot(111)
-plt.title(str(titel) + ", " + str(bedrijfkey))
-ax1.plot(Xs,Ys)
+        a += 1
+        # if this is the end of this figure
+        if a > 6:
+            a = 4
+            n += 1
+            plt.title(avg.titel(file[:6]) + ", " + file[:6])
+            plt.xlim(1980, 2019)
+            plt.ylim(0, 160)
+            plt.legend()
 
-# dfBedrijfstakkenBranchesSBI2008 = pd.DataFrame(pd.read_json("http://opendata.cbs.nl/ODataApi/OData/81975NED/BedrijfstakkenBranchesSBI2008")["value"])
+            # make the title
+            space = False
+            titel = ""
+            for ch in avg.titel(file[:6]):
+                if space and ch != ".":
+                    titel += ch
+                if ch == " ":
+                    space = True
+            plt.savefig("updatedfigures/" + titel)
 
-# for bedrijfkey in maanddf.BedrijfstakkenBranchesSBI2008.unique():
-#     bedrijfstak = maanddf.loc[maanddf["BedrijfstakkenBranchesSBI2008"] == bedrijfkey]
-
-#     for item in dfBedrijfstakkenBranchesSBI2008["value"]:
-#         if int(item["Key"]) == int(bedrijfkey):
-#             titel = "".join(ch for ch in item["Title"] if ch != ".")
-#             break
-    
-#     figure = plt.figure()
-#     i = 0
-    # for afzet in ["A4","A5","A6"]:
-    #     i += 1
-    #     tijdlijn = bedrijfstak.loc[bedrijfstak["Afzet"] == afzet]
-#         X = []
-#         Y = []
-#         for i in range(len(tijdlijn)):
-#             item = tijdlijn.iloc[i]
-#             datum = int(item["Perioden"][:4]) + int(item["Perioden"][-2:])/12
-#             X.append(datum)
-#             Y.append(item["ProducentenprijsindexPPI_1"])
-    #     ax1 = figure.add_subplot(110+i)
-    #     ax1.plot(X,Y)
-    # size = figure.get_size_inches()
-    # figure.set_size_inches(size[0]*2,size[1]*2)
-    # figure.savefig("figures/" + titel, dpi = 1000, bbox_inches='tight')
+if __name__ == "__main__":
+    main()
