@@ -13,8 +13,8 @@ def main():
     for file in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches"):
         path = os.path.join("../Data/DataFrames/DataFrames_Afzet_Branches", file)
         df = pd.read_csv(path)
-        graph = []
 
+        graph = []
         for i in range(len(df)):
             item = df.iloc[i]
             graph.append((item["Perioden"],item["ProducentenprijsindexPPI_1"]))
