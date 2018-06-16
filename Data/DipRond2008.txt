@@ -1,0 +1,23 @@
+32811 Metalektro
+308400 Aardappelproductenindustrie
+320000 Aardolie-industrie
+339200 Auto- en aanhangwagenindustrie
+328100 Basismetaalindustrie
+328105 Basismetaal, metaalprod-industrie
+320705 Chemie en farmaceutische industrie
+320700 Chemische industrie
+346700 Energiebedrijven
+346600 Energievoorziening
+315800 Houtindustrie
+315200 Leer- en schoenenindustrie
+317100 Papierindustrie
+320005 Raffinaderijen en chemie
+323700 Rubber- en kunststofproductindustrie
+307700 Slachterijen en vleeswarenindustrie
+307800 Slachterijen (geen pluimvee)
+308800 Spijsoliën- en -vettenindustrie
+308700 Spijsoliën- en -vettenindustrie ed
+307610 Voedings-, genotmiddelenindustrie
+307600 Voedingsmiddelenindustrie
+309000 Zuivelindustrie
+309100 Zuivelindustrie (geen ijs)
