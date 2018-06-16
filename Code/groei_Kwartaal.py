@@ -24,15 +24,7 @@ from bokeh.models import (
 )
 from bokeh.plotting import figure
 
-
-# In[36]:
-
-
-mainDF = pd.read_csv("maanddf.csv")
-
-
-# In[37]:
-
+mainDF = pd.read_csv("../Data/DataFrames/maanddf.csv")
 
 # Kwartaal periodes
 periodes = mainDF["Perioden"].unique()
@@ -113,6 +105,8 @@ df = pd.DataFrame(df.stack(), columns=['Ont']).reset_index()
 # this is the colormap from the original NYTimes plot
 colors = list(reversed(["#75968f", "#a5bab7", "#c9d9d3", "#e2e2e2", "#dfccce", "#ddb7b1", "#cc7878", "#933b41", "#550b1d"]))
 mapper = LinearColorMapper(palette=colors, low=df.Ont.min(), high=df.Ont.max())
+
+print(df)
 
 source = ColumnDataSource(df)
 
