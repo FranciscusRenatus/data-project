@@ -32,9 +32,11 @@ def heatmapdata():
                     if pd.notnull(prijs1) and pd.notnull(prijs2):
                         prijzen1.append(prijs1)
                         prijzen2.append(prijs2)
-            
-            heatmap = heatmap.append(pd.DataFrame({"B1":[title1],"B2":[title2],"corr":[int(np.correlate(prijzen1,prijzen2)[0])]}))
+            if prijzen1 !=[]:
+                heatmap = heatmap.append(pd.DataFrame({"B1":[title1],"B2":[title2],"corr":[np.corrcoef(prijzen1,prijzen2)[1, 0]]}))
+            else:
+                heatmap = heatmap.append(pd.DataFrame({"B1":[title1],"B2":[title2],"corr":[0]}))
         print(i)
     return heatmap
 if __name__ == "__main__":
-    heatmapdata().to_csv("heatmap.csv")
+    heatmapdata().to_csv("realheatmap.csv")
