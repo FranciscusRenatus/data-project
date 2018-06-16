@@ -1,0 +1,68 @@
+,Key,Title,Kredietcrisis
+0,305700,B Delfstoffenwinning,0
+1,305800,06 Winning van aardolie en aardgas,0
+2,306300,08 Delfstoffenwinning (geen olie en gas),0
+3,307500,C Industrie,0
+4,307610,"10-12 Voedings-, genotmiddelenindustrie",1
+5,307600,10 Voedingsmiddelenindustrie,1
+6,307700,101 Slachterijen en vleeswarenindustrie,1
+7,307800,1011 Slachterijen (geen pluimvee),1
+8,307900,1012 Pluimveeslachterijen,0
+9,308000,1013 Vleesverwerkende industrie,0
+10,308100,102 Visverwerkende industrie,0
+11,308300,"103 Groente-, fruitverwerkende industrie",0
+12,308400,1031 Aardappelproductenindustrie,1
+13,308500,1032 Fruit- en groentesappenindustrie,0
+14,308600,"1039 Groente-,fruitverwerkende industrie",0
+15,308700,104 Spijsoliën- en -vettenindustrie e.d.,1
+16,308800,1041 Spijsoliën- en -vettenindustrie,1
+17,309000,105 Zuivelindustrie,1
+18,309100,1051 Zuivelindustrie (geen ijs),1
+19,309300,106 Meelindustrie,0
+20,309400,1061 Meelindustrie (geen zetmeel),0
+21,309600,107 Brood- en deegwarenindustrie,0
+22,309700,1071 Brood- en banketbakkerijen,0
+23,310000,108 Overige voedingsmiddelenindustrie,0
+24,310100,1081 Suikerindustrie,0
+25,310200,1082 Cacao- en chocoladewerkindustrie,0
+26,311000,109 Diervoederindustrie,0
+27,311300,11 Drankenindustrie,0
+28,311600,1102 Wijnindustrie (uit druiven),0
+29,312100,1107 Frisdrankindustrie,0
+30,312200,12 Tabaksindustrie,0
+31,312505,"13-15 Textiel-, kleding-, lederindustrie",0
+32,312500,13 Textielindustrie,0
+33,314000,14 Kledingindustrie,0
+34,315200,15 Leer- en schoenenindustrie,1
+35,315805,16+23 Hout- en bouwmaterialenindustrie,0
+36,315800,16 Houtindustrie,1
+37,317105,17-18 Papier- en grafische industrie,0
+38,317100,17 Papierindustrie,1
+39,318600,18 Grafische industrie,0
+40,320005,19-22 Raffinaderijen en chemie,1
+41,320000,19 Aardolie-industrie,1
+42,320705,20-21 Chemie en farmaceutische industrie,1
+43,320700,20 Chemische industrie,1
+44,323200,21 Farmaceutische industrie,0
+45,323700,22 Rubber- en kunststofproductindustrie,1
+46,324600,23 Bouwmaterialenindustrie,0
+47,328110,"24-30, 33 Metalektro",0
+48,800002,24-28 Metalektro (geen transport),0
+49,328105,"24-25 Basismetaal, metaalprod.-industrie",1
+50,328100,24 Basismetaalindustrie,1
+51,330300,25 Metaalproductenindustrie,0
+52,332905,26-28 Elektrotechn. en machine-industrie,0
+53,332910,26-27 Elektrische en elektron. Industrie,0
+54,332900,26 Elektrotechnische industrie,0
+55,334800,27 Elektrische apparatenindustrie,0
+56,336500,28 Machine-industrie,0
+57,339205,29-30 Transportmiddelenindustrie,0
+58,339200,29 Auto- en aanhangwagenindustrie,1
+59,340200,30 Overige transportmiddelenindustrie,0
+60,341600,31 Meubelindustrie,0
+61,342400,32 Overige industrie,0
+62,344400,33 Reparatie en installatie van machines,0
+63,346600,D Energievoorziening,1
+64,346700,35 Energiebedrijven,1
+65,348000,E Waterbedrijven en afvalbeheer,0
+66,348100,36 Waterleidingbedrijven,0
