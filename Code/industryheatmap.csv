@@ -1,0 +1,145 @@
+,B1,B2,corr
+0,B Delfstoffenwinning,B Delfstoffenwinning,1.0
+0,B Delfstoffenwinning,C Industrie,0.9443362383433963
+0,B Delfstoffenwinning,"10-12 Voedings-, genotmiddelenindustrie",0.5287713056225958
+0,B Delfstoffenwinning,13 Textielindustrie,0.7440049933809654
+0,B Delfstoffenwinning,16+23 Hout- en bouwmaterialenindustrie,0.42582257810105706
+0,B Delfstoffenwinning,17-18 Papier- en grafische industrie,0.627681715609197
+0,B Delfstoffenwinning,19-22 Raffinaderijen en chemie,0.787586947782049
+0,B Delfstoffenwinning,"24-30, 33 Metalektro",0.5294431165040052
+0,B Delfstoffenwinning,31 Meubelindustrie,0.76489141047557
+0,B Delfstoffenwinning,32 Overige industrie,0.33599190578367716
+0,B Delfstoffenwinning,D Energievoorziening,0.8308042788730645
+0,B Delfstoffenwinning,E Waterbedrijven en afvalbeheer,0.6498845175882566
+0,C Industrie,B Delfstoffenwinning,0.9443362383433964
+0,C Industrie,C Industrie,1.0
+0,C Industrie,"10-12 Voedings-, genotmiddelenindustrie",0.8725360722017413
+0,C Industrie,13 Textielindustrie,0.8901716956525535
+0,C Industrie,16+23 Hout- en bouwmaterialenindustrie,0.6923205866808578
+0,C Industrie,17-18 Papier- en grafische industrie,0.36455607041747845
+0,C Industrie,19-22 Raffinaderijen en chemie,0.9434533105968395
+0,C Industrie,"24-30, 33 Metalektro",0.7916443598431975
+0,C Industrie,31 Meubelindustrie,0.8960516303682847
+0,C Industrie,32 Overige industrie,0.5328437333701072
+0,C Industrie,D Energievoorziening,0.6626294043196586
+0,C Industrie,E Waterbedrijven en afvalbeheer,0.7077331914277917
+0,"10-12 Voedings-, genotmiddelenindustrie",B Delfstoffenwinning,0.5287713056225958
+0,"10-12 Voedings-, genotmiddelenindustrie",C Industrie,0.8725360722017413
+0,"10-12 Voedings-, genotmiddelenindustrie","10-12 Voedings-, genotmiddelenindustrie",1.0
+0,"10-12 Voedings-, genotmiddelenindustrie",13 Textielindustrie,0.9316460189662306
+0,"10-12 Voedings-, genotmiddelenindustrie",16+23 Hout- en bouwmaterialenindustrie,0.9132920322441496
+0,"10-12 Voedings-, genotmiddelenindustrie",17-18 Papier- en grafische industrie,0.01566830188709275
+0,"10-12 Voedings-, genotmiddelenindustrie",19-22 Raffinaderijen en chemie,0.6644058683871866
+0,"10-12 Voedings-, genotmiddelenindustrie","24-30, 33 Metalektro",0.9389685844928134
+0,"10-12 Voedings-, genotmiddelenindustrie",31 Meubelindustrie,0.9144168561141581
+0,"10-12 Voedings-, genotmiddelenindustrie",32 Overige industrie,0.8071987513150154
+0,"10-12 Voedings-, genotmiddelenindustrie",D Energievoorziening,0.002024660140409257
+0,"10-12 Voedings-, genotmiddelenindustrie",E Waterbedrijven en afvalbeheer,-0.8401511512796989
+0,13 Textielindustrie,B Delfstoffenwinning,0.7440049933809654
+0,13 Textielindustrie,C Industrie,0.8901716956525534
+0,13 Textielindustrie,"10-12 Voedings-, genotmiddelenindustrie",0.9316460189662307
+0,13 Textielindustrie,13 Textielindustrie,1.0
+0,13 Textielindustrie,16+23 Hout- en bouwmaterialenindustrie,0.8857389833470817
+0,13 Textielindustrie,17-18 Papier- en grafische industrie,-0.22298820830436947
+0,13 Textielindustrie,19-22 Raffinaderijen en chemie,0.4430933539255605
+0,13 Textielindustrie,"24-30, 33 Metalektro",0.9129146816396276
+0,13 Textielindustrie,31 Meubelindustrie,0.9584369772728986
+0,13 Textielindustrie,32 Overige industrie,0.7496971878851585
+0,13 Textielindustrie,D Energievoorziening,0.34645857808364516
+0,13 Textielindustrie,E Waterbedrijven en afvalbeheer,0.6617123560664775
+0,16+23 Hout- en bouwmaterialenindustrie,B Delfstoffenwinning,0.42582257810105706
+0,16+23 Hout- en bouwmaterialenindustrie,C Industrie,0.6923205866808578
+0,16+23 Hout- en bouwmaterialenindustrie,"10-12 Voedings-, genotmiddelenindustrie",0.9132920322441496
+0,16+23 Hout- en bouwmaterialenindustrie,13 Textielindustrie,0.8857389833470817
+0,16+23 Hout- en bouwmaterialenindustrie,16+23 Hout- en bouwmaterialenindustrie,0.9999999999999999
+0,16+23 Hout- en bouwmaterialenindustrie,17-18 Papier- en grafische industrie,-0.07249126134708495
+0,16+23 Hout- en bouwmaterialenindustrie,19-22 Raffinaderijen en chemie,0.42995293770878323
+0,16+23 Hout- en bouwmaterialenindustrie,"24-30, 33 Metalektro",0.9499218500250589
+0,16+23 Hout- en bouwmaterialenindustrie,31 Meubelindustrie,0.9487711290447655
+0,16+23 Hout- en bouwmaterialenindustrie,32 Overige industrie,0.8255133164438866
+0,16+23 Hout- en bouwmaterialenindustrie,D Energievoorziening,0.03510434576877088
+0,16+23 Hout- en bouwmaterialenindustrie,E Waterbedrijven en afvalbeheer,-0.7430174592632406
+0,17-18 Papier- en grafische industrie,B Delfstoffenwinning,0.627681715609197
+0,17-18 Papier- en grafische industrie,C Industrie,0.36455607041747845
+0,17-18 Papier- en grafische industrie,"10-12 Voedings-, genotmiddelenindustrie",0.01566830188709275
+0,17-18 Papier- en grafische industrie,13 Textielindustrie,-0.22298820830436947
+0,17-18 Papier- en grafische industrie,16+23 Hout- en bouwmaterialenindustrie,-0.07249126134708496
+0,17-18 Papier- en grafische industrie,17-18 Papier- en grafische industrie,1.0
+0,17-18 Papier- en grafische industrie,19-22 Raffinaderijen en chemie,0.5319853064601865
+0,17-18 Papier- en grafische industrie,"24-30, 33 Metalektro",0.02647509139051249
+0,17-18 Papier- en grafische industrie,31 Meubelindustrie,-0.272813592674636
+0,17-18 Papier- en grafische industrie,32 Overige industrie,-0.32508302097143105
+0,17-18 Papier- en grafische industrie,D Energievoorziening,0.6963392231702199
+0,17-18 Papier- en grafische industrie,E Waterbedrijven en afvalbeheer,0.33410550648082815
+0,19-22 Raffinaderijen en chemie,B Delfstoffenwinning,0.787586947782049
+0,19-22 Raffinaderijen en chemie,C Industrie,0.9434533105968395
+0,19-22 Raffinaderijen en chemie,"10-12 Voedings-, genotmiddelenindustrie",0.6644058683871867
+0,19-22 Raffinaderijen en chemie,13 Textielindustrie,0.4430933539255605
+0,19-22 Raffinaderijen en chemie,16+23 Hout- en bouwmaterialenindustrie,0.4299529377087832
+0,19-22 Raffinaderijen en chemie,17-18 Papier- en grafische industrie,0.5319853064601866
+0,19-22 Raffinaderijen en chemie,19-22 Raffinaderijen en chemie,1.0
+0,19-22 Raffinaderijen en chemie,"24-30, 33 Metalektro",0.560013523226693
+0,19-22 Raffinaderijen en chemie,31 Meubelindustrie,0.3740748567909424
+0,19-22 Raffinaderijen en chemie,32 Overige industrie,0.2863734597889487
+0,19-22 Raffinaderijen en chemie,D Energievoorziening,0.4272760882599094
+0,19-22 Raffinaderijen en chemie,E Waterbedrijven en afvalbeheer,-0.3897392548383051
+0,"24-30, 33 Metalektro",B Delfstoffenwinning,0.5294431165040053
+0,"24-30, 33 Metalektro",C Industrie,0.7916443598431975
+0,"24-30, 33 Metalektro","10-12 Voedings-, genotmiddelenindustrie",0.9389685844928134
+0,"24-30, 33 Metalektro",13 Textielindustrie,0.9129146816396276
+0,"24-30, 33 Metalektro",16+23 Hout- en bouwmaterialenindustrie,0.9499218500250589
+0,"24-30, 33 Metalektro",17-18 Papier- en grafische industrie,0.026475091390512486
+0,"24-30, 33 Metalektro",19-22 Raffinaderijen en chemie,0.560013523226693
+0,"24-30, 33 Metalektro","24-30, 33 Metalektro",1.0
+0,"24-30, 33 Metalektro",31 Meubelindustrie,0.9196060312615746
+0,"24-30, 33 Metalektro",32 Overige industrie,0.8354822160149887
+0,"24-30, 33 Metalektro",D Energievoorziening,0.044386333664924484
+0,"24-30, 33 Metalektro",E Waterbedrijven en afvalbeheer,-0.7630274956737383
+0,31 Meubelindustrie,B Delfstoffenwinning,0.76489141047557
+0,31 Meubelindustrie,C Industrie,0.8960516303682847
+0,31 Meubelindustrie,"10-12 Voedings-, genotmiddelenindustrie",0.914416856114158
+0,31 Meubelindustrie,13 Textielindustrie,0.9584369772728986
+0,31 Meubelindustrie,16+23 Hout- en bouwmaterialenindustrie,0.9487711290447656
+0,31 Meubelindustrie,17-18 Papier- en grafische industrie,-0.272813592674636
+0,31 Meubelindustrie,19-22 Raffinaderijen en chemie,0.3740748567909424
+0,31 Meubelindustrie,"24-30, 33 Metalektro",0.9196060312615745
+0,31 Meubelindustrie,31 Meubelindustrie,1.0
+0,31 Meubelindustrie,32 Overige industrie,0.7973881766724142
+0,31 Meubelindustrie,D Energievoorziening,0.37554094683925043
+0,31 Meubelindustrie,E Waterbedrijven en afvalbeheer,0.8096369544385994
+0,32 Overige industrie,B Delfstoffenwinning,0.33599190578367716
+0,32 Overige industrie,C Industrie,0.532843733370107
+0,32 Overige industrie,"10-12 Voedings-, genotmiddelenindustrie",0.8071987513150155
+0,32 Overige industrie,13 Textielindustrie,0.7496971878851585
+0,32 Overige industrie,16+23 Hout- en bouwmaterialenindustrie,0.8255133164438866
+0,32 Overige industrie,17-18 Papier- en grafische industrie,-0.32508302097143105
+0,32 Overige industrie,19-22 Raffinaderijen en chemie,0.2863734597889486
+0,32 Overige industrie,"24-30, 33 Metalektro",0.8354822160149886
+0,32 Overige industrie,31 Meubelindustrie,0.7973881766724142
+0,32 Overige industrie,32 Overige industrie,1.0
+0,32 Overige industrie,D Energievoorziening,-0.07641284061267013
+0,32 Overige industrie,E Waterbedrijven en afvalbeheer,0.68436462899904
+0,D Energievoorziening,B Delfstoffenwinning,0.8308042788730644
+0,D Energievoorziening,C Industrie,0.6626294043196586
+0,D Energievoorziening,"10-12 Voedings-, genotmiddelenindustrie",0.002024660140409257
+0,D Energievoorziening,13 Textielindustrie,0.34645857808364516
+0,D Energievoorziening,16+23 Hout- en bouwmaterialenindustrie,0.03510434576877088
+0,D Energievoorziening,17-18 Papier- en grafische industrie,0.6963392231702199
+0,D Energievoorziening,19-22 Raffinaderijen en chemie,0.4272760882599094
+0,D Energievoorziening,"24-30, 33 Metalektro",0.04438633366492449
+0,D Energievoorziening,31 Meubelindustrie,0.37554094683925043
+0,D Energievoorziening,32 Overige industrie,-0.07641284061267013
+0,D Energievoorziening,D Energievoorziening,1.0
+0,D Energievoorziening,E Waterbedrijven en afvalbeheer,0.39480024619841264
+0,E Waterbedrijven en afvalbeheer,B Delfstoffenwinning,0.6498845175882566
+0,E Waterbedrijven en afvalbeheer,C Industrie,0.7077331914277917
+0,E Waterbedrijven en afvalbeheer,"10-12 Voedings-, genotmiddelenindustrie",-0.8401511512796989
+0,E Waterbedrijven en afvalbeheer,13 Textielindustrie,0.6617123560664775
+0,E Waterbedrijven en afvalbeheer,16+23 Hout- en bouwmaterialenindustrie,-0.7430174592632406
+0,E Waterbedrijven en afvalbeheer,17-18 Papier- en grafische industrie,0.33410550648082815
+0,E Waterbedrijven en afvalbeheer,19-22 Raffinaderijen en chemie,-0.38973925483830507
+0,E Waterbedrijven en afvalbeheer,"24-30, 33 Metalektro",-0.7630274956737383
+0,E Waterbedrijven en afvalbeheer,31 Meubelindustrie,0.8096369544385994
+0,E Waterbedrijven en afvalbeheer,32 Overige industrie,0.68436462899904
+0,E Waterbedrijven en afvalbeheer,D Energievoorziening,0.3948002461984126
+0,E Waterbedrijven en afvalbeheer,E Waterbedrijven en afvalbeheer,0.9999999999999998
