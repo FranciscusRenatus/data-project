@@ -1,10 +1,6 @@
 import pandas as pd
-import json
-from sklearn import preprocessing
 import numpy as np
-from scipy.stats.stats import pearsonr
 import math
-
 from math import pi
 
 from bokeh.io import show
@@ -18,10 +14,9 @@ from bokeh.models import (
 )
 from bokeh.plotting import figure
 
-df = pd.read_csv("realheatmap.csv").drop(columns="Unnamed: 0")
+df = pd.read_csv("industryheatmap.csv").drop(columns="Unnamed: 0")
 b = list(df["B1"].unique())
 
-# this is the colormap from the original NYTimes plot
 colors = ["#0000AA", "#0055DD", "#00BBFF", "#FFFFFF", "#00FF00","#00dd00","#008800"]
 mapper = LinearColorMapper(palette=colors, low=min(df["corr"].tolist()), high=max(df["corr"].tolist()))
 

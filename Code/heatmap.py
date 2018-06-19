@@ -7,7 +7,8 @@ import os
 import numpy as np
 
 def heatmapdata():
-    files = [x for x in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches") if x[-2:] == "A6"]
+    files = [x for x in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches") if x[-2:] == "A6" and x[:6] in [str(i) for i in [305700,346600,315805,328110,341600,317105,320005,312500,307610,348000,342400,307500]]]
+    print(files)
     heatmap = pd.DataFrame({"B1":[],"B2":[],"corr":[]})
     datums = []
     for j in range(1981,2017):
@@ -39,4 +40,4 @@ def heatmapdata():
         print(i)
     return heatmap
 if __name__ == "__main__":
-    heatmapdata().to_csv("realheatmap.csv")
+    heatmapdata().to_csv("industryheatmap.csv")

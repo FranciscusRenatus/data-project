@@ -8,7 +8,7 @@
 # ###### *Waarschijnlijk het beste resultaten met Overkoepelende industrieen in eigen data set te houden, te sparse anders ?
 # ###### *Idee, maken van categorische data voor het indelen van branches in de bijhorende overkoepelende industrie.
 
-# In[68]:
+# In[1]:
 
 
 import pandas as pd
@@ -20,17 +20,19 @@ import math
 import sys
 
 
-# In[69]:
+# In[2]:
 
 
-<<<<<<< HEAD
-mainDF = pd.read_csv("../Data/Dataframe/maanddf.csv")
-=======
 mainDF = pd.read_csv("maanddf.csv")
->>>>>>> 146c4cbda8d273cf35beadd7c9a9166be36e5095
 
 
-# In[70]:
+# In[3]:
+
+
+mainDF.fillna(0)
+
+
+# In[4]:
 
 
 wegingDF = mainDF.loc[mainDF["Wegingcoefficient_4"] != 0]
@@ -43,7 +45,7 @@ wegingDF.index.name = None
 wegingDF.loc[:,"weging_tov_b"] = np.nan
 
 
-# In[89]:
+# In[5]:
 
 
 branches = wegingDF["BedrijfstakkenBranchesSBI2008"].unique()
@@ -54,8 +56,6 @@ for b in branches:
     temp = wegingDF.loc[wegingDF["BedrijfstakkenBranchesSBI2008"] == b, :]
     wx = temp["Wegingcoefficient_4"].unique()
     afzetx = temp["Afzet"].unique()
-    
-    print(afzetx, b)
     
     if len(afzetx) == 3 and len(wx) == 3:       
         buiten = wx[2]/wx[0]
@@ -85,16 +85,9 @@ for b in branches:
     l = []
 
 
-# In[ ]:
-
-
-wegingDF.loc[wegingDF["BedrijfstakkenBranchesSBI2008"] == b, :]
-
-
 # #### wegingscoifficient van overkoepelende industrieen.
 
-# In[75]:
-
+# In[6]:
 
 
 ub = [305700,346600,315805,328110,341600,317105,320005,312500,307610,348000,342400,307500]
@@ -114,18 +107,79 @@ for b in ub:
     temp = wegingDF.loc[wegingDF["BedrijfstakkenBranchesSBI2008"] == b, :]
     wx = temp["Wegingcoefficient_4"].unique()
     ont_percent_ob[b] = wx[0]/summing
+    
+ont_percent_ob
+
+
+# #### hieronder wordt barchart voor ont percent ob gemaakt
+
+# In[12]:
+
+
+dfBedrijfstakkenBranchesSBI2008 = pd.read_json("http://opendata.cbs.nl/ODataApi/OData/81975NED/BedrijfstakkenBranchesSBI2008")
+listBedrijfstakken = dfBedrijfstakkenBranchesSBI2008["value"].tolist()
+pdBedrijfstakkenSBI = pd.DataFrame(listBedrijfstakken)
+branchNamen = pdBedrijfstakkenSBI[["Key","Title"]]
+
+
+# In[15]:
+
+
+from bokeh.io import show, output_file
+from bokeh.models import ColumnDataSource, FactorRange
+from bokeh.plotting import figure
+import bokeh.palettes as pal
+from bokeh.models import HoverTool
+
+
+# In[18]:
+
+
+vList = []
+for key, val in ont_percent_ob.items():
+    vList.append(round(float(val*100),2))
+
+color = pal.viridis(12)
+ 
+ub = ['305700','346600','315805','328110','341600','317105','320005','312500','307610','348000','342400','307500']
+#names = ["Delfstoffenwinning", "Energievoorziening", "Hout- en bouwmaterialenindustrie", "Metalektro", "Meubelindustrie", "Papier- en grafische industrie", "Raffinaderijen en chemie", "Textielindustrie", "Voedings-, genotmiddelenindustrie", "Waterbedrijven en afvalbeheer", "Overige industrie", "Industrie"]
+names = ["Delfstoffen", "Energie", "Bouw", "Metalektro", "Meubels", "Papier", "chemie", "Textiel", "Voeding", "Water", "Overige", "Industrie"]
+
+
+# In[19]:
+
+
+output_file("colormapped_bars.html")
+
+source = ColumnDataSource(data=dict(branches=ub, values=vList, color=color, names=names))
+
+hover = HoverTool(tooltips=[
+    ("Industrie", "@names"),
+    ("Aandeel", "@values")
+])
+
+p = figure(x_range=FactorRange(factors=ub), y_range=(0.00, 40.00), plot_height=250, title="Precentages weging tov totaal",
+           toolbar_location=None, tools=[hover])
+
+p.vbar(x='branches', top='values', width=0.9, color='color', source=source)
+
+p.xgrid.grid_line_color = None
+p.legend.orientation = "horizontal"
+p.legend.location = "top_center"
+
+show(p)
 
 
 # #### newDF contains feature "weging_tov_b" in percentages
 
-# In[73]:
+# In[7]:
 
 
 dictO ={}
 listO = []
 branches = wegingDF["BedrijfstakkenBranchesSBI2008"].unique()
 
-for b in branches:
+for b in branches: 
     
     temp = wegingDF.loc[wegingDF["BedrijfstakkenBranchesSBI2008"] == b]
     value = ont_percent[b]
@@ -154,7 +208,7 @@ for key,value in dictO.items():
 
 # #### afzetgroter feature: 1 = meer binnenlands afzet, 0 = meer buitenlands afzet.
 
-# In[77]:
+# In[8]:
 
 
 dictO ={}
@@ -190,7 +244,7 @@ for key,value in dictO.items():
 
 # #### Sparse feature, alleen binnenlands afzet.
 
-# In[97]:
+# In[9]:
 
 
 dictO ={}
@@ -224,8 +278,77 @@ for key,value in dictO.items():
     newDF3 = newDF3.append(temp)
 
 
-# In[98]:
+# In[10]:
 
 
-newDF3.loc[newDF3["BedrijfstakkenBranchesSBI2008"] == 344400]
+newDF3.head()
+
+
+# #### Vanaf hier wordt er gepoogt regressie toe te passen
+
+# In[11]:
+
+
+newDF3 = newDF3.drop(['Wegingcoefficient_4', 'Perioden', 'BedrijfstakkenBranchesSBI2008'], axis=1)
+
+
+# In[12]:
+
+
+#newDF3 = newDF3.loc[newDF3["Afzet"]!="A6"]
+
+
+# In[13]:
+
+
+newDF3 = newDF3.fillna(0)
+
+
+# In[14]:
+
+
+newDF3["ont_maal_weging"] = newDF3["OntwikkelingTOV1MaandEerder_3"] * newDF3["weging_tov_b"]
+
+
+# In[15]:
+
+
+newDF3 = newDF3.drop(['Afzet'], axis=1)
+newDF3["ppi"] = newDF3["ProducentenprijsindexPPI_1"]
+newDF3 = newDF3.drop(['ProducentenprijsindexPPI_1'], axis=1)
+newDF3.head()
+
+
+# In[16]:
+
+
+import numpy as np
+
+import pandas as pd
+from pandas import Series,DataFrame
+from bokeh.layouts import gridplot, row, column
+
+from bokeh.io import push_notebook, show, output_notebook
+from bokeh.plotting import figure
+
+from sklearn.datasets import load_boston
+
+
+# In[17]:
+
+
+# You can see what these names mean in the description that we printed at the start
+print(newDF3.columns[:6])
+
+figures = [figure() for _ in range(6)]
+for index, fig in enumerate(figures):
+    # Create a scatter-plot
+    fig.scatter(newDF3[newDF3.columns[index]], newDF3["ppi"])
+    
+    ## Add some axis information
+    fig.xaxis.axis_label = newDF3.columns[index]
+    fig.yaxis.axis_label = "ppi"
+
+    
+show(gridplot(figures, ncols=2, plot_width=400, plot_height=250, toolbar_location=None))
 
