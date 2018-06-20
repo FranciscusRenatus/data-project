@@ -6,6 +6,11 @@ import os
 def month(string):
     return int(string[:4]) + int(string[-2:])/12
 
+def unmonth(month):
+    y = str(month)[:4]
+    m = str(round((month - int(y))*12))
+    return y + "MM" + m
+
 def average():
     X = {}
     N = {}

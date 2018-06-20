@@ -9,8 +9,9 @@ from bokeh.models import (
     PrintfTickFormatter,
     ColorBar,
 )
-from bokeh.plotting import figure
+from bokeh.plotting import (figure,output_file)
 import nationalaverage as avg
+import graphgenerator as graph
 import os
 
 def main():
@@ -23,9 +24,9 @@ def main():
         if prijzen != []:
             dips = []
             peak = (prijzen[0],perioden[0])
-            verschil = prijzen[0] - prijzen[1]
+            verschil = prijzen[1] - prijzen[0]
             for i in range(2,len(prijzen)):
-                newverschil = prijzen[i-1] - prijzen[i]
+                newverschil = prijzen[i] - prijzen[i-1]
                 if prijzen[i] > peak[0]:
                     peak = (prijzen[i],perioden[i])
                 if newverschil >= 0 and verschil < 0:
@@ -33,41 +34,30 @@ def main():
                     dips.append((peak[0]-dal[0],avg.month(peak[1]),avg.month(dal[1])))
                     peak = dal
                 verschil = newverschil
-        impact[file[:6]] = max(dips)
-    return impact                    
-
-        # if "2008MM01" in df["Perioden"].tolist():
-        #     prijsvoor = df.loc[df["Perioden"] == "2008MM01"]["ProducentenprijsindexPPI_1"].tolist()[0]
-        #     prijsna = df.loc[df["Perioden"] == "2010MM01"]["ProducentenprijsindexPPI_1"].tolist()[0]
-        #     impact[file[:6]] = (prijsna/100)/(prijsvoor/100)
-            # print(avg.titel(file[:6])," = ", impact[file[:6]])
-    # return impact
-
-    # source = ColumnDataSource({'bedrijf':list(impact.keys()),'verschil':list(impact.values())})
-    # print(source.to_df())
-    # X = [avg.titel(b) for b in impact.keys()]
-    # Y = list(impact.values())
-    # p = figure(x_range = X, tools = "hover,save,box_zoom,reset,wheel_zoom")
-    # p.vbar(x = 'bedrijf', top = 'verschil', source = source, width = 1)
-    # p.select_one(HoverTool).tooltips = [
-    #     ('bedrijf', '@bedrijf'),
-    #     ('verschil', '@verschil'),
-    # ]
-    # show(p)
-    # # X = impact.keys()
-    # # Y = impact.values()
-    # # print(X)
-    # # print(Y)
-    # # plt.bar(X,Y)
-    # # plt.show()
+        impact[file] = max(dips)
+    return impact
 
 if __name__ == "__main__":
     impact = main()
-    # X = []
-    # for key in impact:
-    #     print(avg.titel(key),":",impact[key],impact[key][0]/(impact[key][2]-impact[key][1]))
-    #     if impact[key] == max(impact.values()):
-    #         print("max")
-    plt.figure(1)
-    plt.scatter([x[1] for x in impact.values()],[x[2]-x[1] for x in impact.values()])
-    plt.show()
+    graph.generate([x[1] for x in impact.values()],[x[2] for x in impact.values()])
+    # dfdict = {
+    #     "branch":[avg.titel(x[:6]) for x in impact.keys()],
+    #     "afzet":[avg.titel(x[-2:]) for x in impact.keys()],
+    #     "dip":[x[0] for x in impact.values()],
+    #     "start":[x[1] for x in impact.values()],
+    #     "eind":[x[2] for x in impact.values()],
+    #     "tijd":[x[2]-x[1] for x in impact.values()]
+    # }
+    
+    # source = ColumnDataSource(dfdict)
+    # p = figure(title = "dip", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
+    # p.scatter(size = "dip", y = "tijd", x = "start", source = source, alpha = 0.3)
+    # p.select_one(HoverTool).tooltips = [
+    #     ('branch', '@branch'),
+    #     ('afzet','@afzet'),
+    #     ('dip', '@dip'),
+    #     ('tijd', '@tijd'),
+    #     ('start','avg.unmonth(@start)'),
+    #     ('eind','avg.unmonth(@eind)'),
+    # ]
+    # show(p)

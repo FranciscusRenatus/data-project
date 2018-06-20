@@ -26,7 +26,7 @@ TOOLS = "hover,save,box_zoom,reset,wheel_zoom"
 
 p = figure(title="heatmap correlatie",
            x_range=b, y_range=list(reversed(b)),
-           x_axis_location="above", plot_width=1250, plot_height=600,
+           x_axis_location="above", plot_width=1000, plot_height=1000,
            tools=TOOLS, toolbar_location='below')
 
 p.grid.grid_line_color = None
