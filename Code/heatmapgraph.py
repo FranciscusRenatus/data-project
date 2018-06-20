@@ -14,7 +14,7 @@ from bokeh.models import (
 )
 from bokeh.plotting import figure
 
-df = pd.read_csv("industryheatmap.csv").drop(columns="Unnamed: 0")
+df = pd.read_csv("relativeheatmap.csv").drop(columns="Unnamed: 0")
 b = list(df["B1"].unique())
 
 colors = ["#0000AA", "#0055DD", "#00BBFF", "#FFFFFF", "#00FF00","#00dd00","#008800"]

@@ -21,7 +21,7 @@ def main():
         perioden = df["Perioden"].tolist()
         prijzen = df["ProducentenprijsindexPPI_1"].tolist()
         if prijzen != []:
-            dalen = []
+            dips = []
             peak = (prijzen[0],perioden[0])
             verschil = prijzen[0] - prijzen[1]
             for i in range(2,len(prijzen)):
@@ -30,12 +30,11 @@ def main():
                     peak = (prijzen[i],perioden[i])
                 if newverschil >= 0 and verschil < 0:
                     dal = (prijzen[i],perioden[i])
-                    # print(peak,dal,i)
-                    dalen.append((peak[0]-dal[0],peak[1],dal[1]))
+                    dips.append((peak[0]-dal[0],avg.month(peak[1]),avg.month(dal[1])))
                     peak = dal
                 verschil = newverschil
-        return dalen
-                    
+        impact[file[:6]] = max(dips)
+    return impact                    
 
         # if "2008MM01" in df["Perioden"].tolist():
         #     prijsvoor = df.loc[df["Perioden"] == "2008MM01"]["ProducentenprijsindexPPI_1"].tolist()[0]
@@ -63,6 +62,12 @@ def main():
     # # plt.show()
 
 if __name__ == "__main__":
-    print(max(main()))
-    # for key in main():
-        # print(avg.titel(key),":",main()[key])
+    impact = main()
+    # X = []
+    # for key in impact:
+    #     print(avg.titel(key),":",impact[key],impact[key][0]/(impact[key][2]-impact[key][1]))
+    #     if impact[key] == max(impact.values()):
+    #         print("max")
+    plt.figure(1)
+    plt.scatter([x[1] for x in impact.values()],[x[2]-x[1] for x in impact.values()])
+    plt.show()

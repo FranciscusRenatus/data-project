@@ -7,9 +7,10 @@ import os
 import numpy as np
 
 def heatmapdata():
-    files = [x for x in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches") if x[-2:] == "A6" and x[:6] in [str(i) for i in [305700,346600,315805,328110,341600,317105,320005,312500,307610,348000,342400,307500]]]
-    print(files)
+    # files = [x for x in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches") if x[-2:] == "A6" and x[:6] in [str(i) for i in [305700,346600,315805,328110,341600,317105,320005,312500,307610,348000,342400,307500]]]
+    files = [x for x in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches") if x[-2:] == "A6"]
     heatmap = pd.DataFrame({"B1":[],"B2":[],"corr":[]})
+    AVG = avg.average()
     datums = []
     for j in range(1981,2017):
         for k in range(1,12):
@@ -28,8 +29,8 @@ def heatmapdata():
             prijzen1,prijzen2 = [],[]
             for datum in datums:
                 if datum in df1["Perioden"].tolist() and datum in df2["Perioden"].tolist():
-                    prijs1 = df1.loc[df1["Perioden"] == datum]["ProducentenprijsindexPPI_1"].tolist()[0]
-                    prijs2 = df2.loc[df2["Perioden"] == datum]["ProducentenprijsindexPPI_1"].tolist()[0]
+                    prijs1 = df1.loc[df1["Perioden"] == datum]["ProducentenprijsindexPPI_1"].tolist()[0] - AVG[avg.month(datum)]
+                    prijs2 = df2.loc[df2["Perioden"] == datum]["ProducentenprijsindexPPI_1"].tolist()[0] - AVG[avg.month(datum)]
                     if pd.notnull(prijs1) and pd.notnull(prijs2):
                         prijzen1.append(prijs1)
                         prijzen2.append(prijs2)
@@ -40,4 +41,4 @@ def heatmapdata():
         print(i)
     return heatmap
 if __name__ == "__main__":
-    heatmapdata().to_csv("industryheatmap.csv")
+    heatmapdata().to_csv("relativeheatmap.csv")
