@@ -1,0 +1,56 @@
+,Key,Title,Hoofdbranch
+1,305800,06 Winning van aardolie en aardgas,1
+2,306300,08 Delfstoffenwinning (geen olie en gas),1
+5,307600,10 Voedingsmiddelenindustrie,8
+6,307700,101 Slachterijen en vleeswarenindustrie,8
+7,307800,1011 Slachterijen (geen pluimvee),8
+8,307900,1012 Pluimveeslachterijen,8
+9,308000,1013 Vleesverwerkende industrie,8
+10,308100,102 Visverwerkende industrie,8
+11,308300,"103 Groente-, fruitverwerkende industrie",8
+12,308400,1031 Aardappelproductenindustrie,8
+13,308500,1032 Fruit- en groentesappenindustrie,8
+14,308600,"1039 Groente-,fruitverwerkende industrie",8
+15,308700,104 Spijsoliën- en -vettenindustrie e.d.,8
+16,308800,1041 Spijsoliën- en -vettenindustrie,8
+17,309000,105 Zuivelindustrie,8
+18,309100,1051 Zuivelindustrie (geen ijs),8
+19,309300,106 Meelindustrie,8
+20,309400,1061 Meelindustrie (geen zetmeel),8
+21,309600,107 Brood- en deegwarenindustrie,8
+22,309700,1071 Brood- en banketbakkerijen,8
+23,310000,108 Overige voedingsmiddelenindustrie,8
+24,310100,1081 Suikerindustrie,8
+25,310200,1082 Cacao- en chocoladewerkindustrie,8
+26,311000,109 Diervoederindustrie,8
+27,311300,11 Drankenindustrie,8
+28,311600,1102 Wijnindustrie (uit druiven),0
+29,312100,1107 Frisdrankindustrie,8
+30,312200,12 Tabaksindustrie,8
+31,312505,"13-15 Textiel-, kleding-, lederindustrie",0
+33,314000,14 Kledingindustrie,7
+34,315200,15 Leer- en schoenenindustrie,7
+36,315800,16 Houtindustrie,3
+38,317100,17 Papierindustrie,5
+39,318600,18 Grafische industrie,5
+41,320000,19 Aardolie-industrie,1
+42,320705,20-21 Chemie en farmaceutische industrie,6
+43,320700,20 Chemische industrie,6
+44,323200,21 Farmaceutische industrie,6
+45,323700,22 Rubber- en kunststofproductindustrie,6
+46,324600,23 Bouwmaterialenindustrie,3
+48,800002,24-28 Metalektro (geen transport),4
+49,328105,"24-25 Basismetaal, metaalprod.-industrie",4
+50,328100,24 Basismetaalindustrie,4
+51,330300,25 Metaalproductenindustrie,4
+52,332905,26-28 Elektrotechn. en machine-industrie,4
+53,332910,26-27 Elektrische en elektron. Industrie,4
+54,332900,26 Elektrotechnische industrie,4
+55,334800,27 Elektrische apparatenindustrie,4
+56,336500,28 Machine-industrie,4
+57,339205,29-30 Transportmiddelenindustrie,0
+58,339200,29 Auto- en aanhangwagenindustrie,4
+59,340200,30 Overige transportmiddelenindustrie,0
+62,344400,33 Reparatie en installatie van machines,0
+64,346700,35 Energiebedrijven,2
+66,348100,36 Waterleidingbedrijven,0
