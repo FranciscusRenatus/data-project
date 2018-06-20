@@ -29,7 +29,9 @@ def generate(starten,einden):
             plt.plot(X[eind-1:],Y[eind-1:], color = "blue")
             plt.title(avg.titel(file[:6]) + ", " + avg.titel(file[-2:]))
             plt.xlim(1980, 2019)
+            plt.xlabel("jaar")
             plt.ylim(0, 160)
+            plt.ylabel("producentenprijsindex")
             plt.savefig("dipfigures/" + file)
 
 # if __name__ == "__main__":

@@ -39,20 +39,41 @@ def main():
 
 if __name__ == "__main__":
     impact = main()
-    graph.generate([x[1] for x in impact.values()],[x[2] for x in impact.values()])
-    # dfdict = {
-    #     "branch":[avg.titel(x[:6]) for x in impact.keys()],
-    #     "afzet":[avg.titel(x[-2:]) for x in impact.keys()],
-    #     "dip":[x[0] for x in impact.values()],
-    #     "start":[x[1] for x in impact.values()],
-    #     "eind":[x[2] for x in impact.values()],
-    #     "tijd":[x[2]-x[1] for x in impact.values()]
-    # }
+    # graph.generate([x[1] for x in impact.values()],[x[2] for x in impact.values()])
+    dfdict = {
+        "branch":[avg.titel(x[:6]) for x in impact.keys()],
+        "afzet":[avg.titel(x[-2:]) for x in impact.keys()],
+        "dip":[x[0] for x in impact.values()],
+        "start":[x[1] for x in impact.values()],
+        "eind":[x[2] for x in impact.values()],
+        "tijd":[x[2]-x[1] for x in impact.values()],
+        "imgs":["dipfigures/" + x + ".png" for x in impact.keys()]
+    }
     
-    # source = ColumnDataSource(dfdict)
-    # p = figure(title = "dip", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
-    # p.scatter(size = "dip", y = "tijd", x = "start", source = source, alpha = 0.3)
-    # p.select_one(HoverTool).tooltips = [
+    source = ColumnDataSource(dfdict)
+    TOOLTIPS = """
+        <div>
+            <div>
+                <img
+                    src="@imgs" height="200" alt="@imgs" width="300"
+                    style="float: left; margin: 0px 15px 15px 0px;"
+                ></img>
+            </div>
+            <div>
+                <span style="font-size: 15px>
+                    branch:@branch<br>
+                    afzet:@afzet<br>
+                    dip:@dip<br>
+                    tijd:@tijd<br>
+                    start:@start<br>
+                    eind:@eind
+                </span>
+            </div>
+        </div>
+    """
+    p = figure(title = "dip", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
+    p.scatter(y = "tijd", x = "start", source = source, alpha = 0.3)
+    p.select_one(HoverTool).tooltips = TOOLTIPS
     #     ('branch', '@branch'),
     #     ('afzet','@afzet'),
     #     ('dip', '@dip'),
@@ -60,4 +81,6 @@ if __name__ == "__main__":
     #     ('start','avg.unmonth(@start)'),
     #     ('eind','avg.unmonth(@eind)'),
     # ]
-    # show(p)
+    p.xaxis.axis_label = "starting year of the dip"
+    p.yaxis.axis_label = "duration of the dip"
+    show(p)
