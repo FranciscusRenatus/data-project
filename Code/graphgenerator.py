@@ -32,7 +32,7 @@ def generate(starten,einden):
             plt.xlabel("jaar")
             plt.ylim(0, 160)
             plt.ylabel("producentenprijsindex")
-            plt.savefig("dipfigures/" + file)
+            plt.savefig("../Docs/Dip_Figures/" + file)
 
 # if __name__ == "__main__":
 #     generate()

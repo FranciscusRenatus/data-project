@@ -1,5 +1,6 @@
 import pandas as pd
 import json
+import os
 
 # Maakt DF genaamd FeaturesDF aan met alleen de branchID en Titel
 dfBedrijfstakkenBranchesSBI2008 = pd.DataFrame(pd.read_json("http://opendata.cbs.nl/ODataApi/OData/81975NED/BedrijfstakkenBranchesSBI2008")["value"].tolist())
@@ -31,4 +32,5 @@ for FeatureLijst in LijstVanFeatures:
     i += 1
 
 print(FeaturesDF)
-FeaturesDF.to_csv('FeaturesDF.csv')
+path=r'../Data/DataFrames/'
+FeaturesDF.to_csv(os.path.join(path,r'FeaturesDF.csv'))

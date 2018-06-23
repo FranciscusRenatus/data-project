@@ -25,7 +25,6 @@ for path in filepaths:
     except IndexError:
         pass
     continue
-print('doneodneodneodnoendonedeo')
 dates = X.keys()
 Y = X.values()
 print(X)
@@ -33,5 +32,5 @@ print(X)
 #fig = plt.hist(dates, bins = 3)
 plt.bar(dates, Y, color='g')
 #plt.plot([x for x,y in sorted(zip(X,X.values()))],[y for x,y in sorted(zip(X,X.values()))])
-plt.savefig("figures/start_frequencies")
+plt.savefig("../Docs/start_frequencies")
 plt.show()

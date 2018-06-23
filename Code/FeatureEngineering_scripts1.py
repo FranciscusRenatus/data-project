@@ -23,11 +23,7 @@ import sys
 # In[69]:
 
 
-<<<<<<< HEAD
-mainDF = pd.read_csv("../Data/Dataframe/maanddf.csv")
-=======
-mainDF = pd.read_csv("maanddf.csv")
->>>>>>> 146c4cbda8d273cf35beadd7c9a9166be36e5095
+mainDF = pd.read_csv("../Data/DataFrames/maanddf.csv")
 
 
 # In[70]:

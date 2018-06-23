@@ -30,4 +30,4 @@ for file in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches"):
     ax1.set_ylim(-50,100)
     ax1.plot([x[0] for x in graph],[y[1] for y in graph])
     ax1.set_title(title)
-    figure.savefig("avgfigures/" + file, dpi = 200, bbox_inches='tight')
+    figure.savefig("../Docs/Average_Figures/" + file, dpi = 200, bbox_inches='tight')

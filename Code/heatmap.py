@@ -40,5 +40,9 @@ def heatmapdata():
                 heatmap = heatmap.append(pd.DataFrame({"B1":[title1],"B2":[title2],"corr":[0]}))
         print(i)
     return heatmap
+
+
+savepath=r'../Data/DataFrames/'
+
 if __name__ == "__main__":
-    heatmapdata().to_csv("relativeheatmap.csv")
+    heatmapdata().to_csv(os.path.join(r'../Data/DataFrames/',r'relativeheatmap.csv'))

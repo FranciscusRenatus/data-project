@@ -49,4 +49,4 @@ if __name__ == "__main__":
     Y = [y for x,y in sorted(zip(AVG,AVG.values()))]
     plt.plot(X,Y)
     plt.plot([X[0]]+[X[-1]],[Y[0]]+[Y[-1]])
-    plt.savefig("figures/A6average")
+    plt.savefig("../Docs/Average_Figures/A6average")

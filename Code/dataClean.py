@@ -1,6 +1,7 @@
 import pandas as pd
 import json
 from sklearn import preprocessing
+import os
 
 
 # initialize dataframe
@@ -38,6 +39,9 @@ pdBedrijfstakkenSBI = pd.DataFrame(dfBedrijfstakkenBranchesSBI2008["value"].toli
 branchNamen = pdBedrijfstakkenSBI[["Key","Title"]]
 
 # lege entries verwijderen en alle data opsplitsen per branch en afzet
+path=r'../Data/DataFrames/DataFrames_Afzet_Branches/'
+
+
 for i in branchNamen["Key"]:
     for k in ["A4","A5","A6"]:
         BranchTemp = CleanDF2.loc[CleanDF2["BedrijfstakkenBranchesSBI2008"] == i]
@@ -49,4 +53,5 @@ for i in branchNamen["Key"]:
         BranchCleanAfzet = BranchCleanAfzet.drop("OntwikkelingTOV1MaandEerder_3", 1)
         BranchCleanAfzet = BranchCleanAfzet.interpolate()
         BranchCleanAfzet = BranchCleanAfzet.loc[BranchCleanAfzet["ProducentenprijsindexPPI_1"].notnull()]
-        BranchCleanAfzet.to_csv(i + " - " + k)
+        BranchCleanAfzet.to_csv(os.path.join(path,(i + " - " + k)))
+        
