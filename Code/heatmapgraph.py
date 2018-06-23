@@ -13,14 +13,19 @@ from bokeh.models import (
     ColorBar,
 )
 from bokeh.plotting import figure
+from colour import Color
 
-df = pd.read_csv("relativeheatmap.csv").drop(columns="Unnamed: 0")
+df = pd.read_csv("industryheatmap.csv").drop(columns="Unnamed: 0")
 b = list(df["B1"].unique())
 
-colors = ["#0000AA", "#0055DD", "#00BBFF", "#FFFFFF", "#00FF00","#00dd00","#008800"]
+blue = Color("blue")
+white = Color("white")
+green = Color("green")
+colors = [c.hex_l for c in blue.range_to(white,25)] + [c.hex_l for c in white.range_to(green,25)]
 mapper = LinearColorMapper(palette=colors, low=min(df["corr"].tolist()), high=max(df["corr"].tolist()))
 
 source = ColumnDataSource(df)
+#.loc[df["B1"] == "B Delfstoffenwinning"]
 
 TOOLS = "hover,save,box_zoom,reset,wheel_zoom"
 

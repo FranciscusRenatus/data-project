@@ -56,23 +56,21 @@ if __name__ == "__main__":
             <div>
                 <img
                     src="@imgs" height="200" alt="@imgs" width="300"
-                    style="float: left; margin: 0px 15px 15px 0px;"
+                    style="float: left; margin: 0px 15px 15px 0px"
                 ></img>
             </div>
             <div>
-                <span style="font-size: 15px>
-                    branch:@branch<br>
-                    afzet:@afzet<br>
-                    dip:@dip<br>
-                    tijd:@tijd<br>
-                    start:@start<br>
-                    eind:@eind
-                </span>
+                <span style="font-size: 17px; font-weight: bold;">@branch</span>
             </div>
         </div>
     """
+                    # afzet:@afzet
+                    # dip:@dip
+                    # tijd:@tijd
+                    # start:@start
+                    # eind:@eind
     p = figure(title = "dip", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
-    p.scatter(y = "tijd", x = "start", source = source, alpha = 0.3)
+    p.scatter(size = 'dip', y = "tijd", x = "start", source = source, alpha = 0.3)
     p.select_one(HoverTool).tooltips = TOOLTIPS
     #     ('branch', '@branch'),
     #     ('afzet','@afzet'),
