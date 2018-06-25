@@ -15,39 +15,38 @@ import graphgenerator as graph
 import os
 
 def main():
-    impact = {}
+    impact = []
     for file in os.listdir("../Data/DataFrames/DataFrames_Afzet_Branches"):
         path = os.path.join("../Data/DataFrames/DataFrames_Afzet_Branches", file)
         df = pd.read_csv(path)
         perioden = df["Perioden"].tolist()
         prijzen = df["ProducentenprijsindexPPI_1"].tolist()
         if prijzen != []:
-            dips = []
-            peak = (prijzen[0],perioden[0])
-            verschil = prijzen[1] - prijzen[0]
-            for i in range(2,len(prijzen)):
-                newverschil = prijzen[i] - prijzen[i-1]
+            peak = dal = (prijzen[0],perioden[0])
+            for i in range(len(prijzen)):
                 if prijzen[i] > peak[0]:
                     peak = (prijzen[i],perioden[i])
-                if newverschil >= 0 and verschil < 0:
+                elif prijzen[i] <= dal[0]:
                     dal = (prijzen[i],perioden[i])
-                    dips.append((peak[0]-dal[0],avg.month(peak[1]),avg.month(dal[1])))
-                    peak = dal
-                verschil = newverschil
-        impact[file] = max(dips)
+                else:
+                    impact.append(((peak[0]-dal[0])/peak[0],avg.month(peak[1]),avg.month(dal[1]),file))
+                    peak = dal = (prijzen[i],perioden[i])
     return impact
 
 if __name__ == "__main__":
     impact = main()
-    # graph.generate([x[1] for x in impact.values()],[x[2] for x in impact.values()])
+    impact = [x for x in impact if (x[0] > 1/4 or x[0] < -1/4) and (x[3][:6] != "346600" and x[3][:6] != "346700")]
+    graph.generate([x[1] for x in impact],[x[2] for x in impact],[x[3] for x in impact])
+    output_file("../Data/HTML/relativedip.html")
     dfdict = {
-        "branch":[avg.titel(x[:6]) for x in impact.keys()],
-        "afzet":[avg.titel(x[-2:]) for x in impact.keys()],
-        "dip":[x[0] for x in impact.values()],
-        "start":[x[1] for x in impact.values()],
-        "eind":[x[2] for x in impact.values()],
-        "tijd":[x[2]-x[1] for x in impact.values()],
-        "imgs":["dipfigures/" + x + ".png" for x in impact.keys()]
+        "branch":[avg.titel(x[3][:6]) for x in impact],
+        "afzet":[avg.titel(x[3][-2:]) for x in impact],
+        "dip":[x[0] for x in impact],
+        "start":[x[1] for x in impact],
+        "eind":[x[2] for x in impact],
+        "tijd":[abs(x[2]-x[1]) for x in impact],
+        "color":["green" if x[0] < -1/4 else "blue" for x in impact],
+        "imgs":["../../Docs/relativedipfigures/" + x[3] + " " + "".join(ch if ch != "." else "," for ch in str(x[1])) + ".png" for x in impact]
     }
     
     source = ColumnDataSource(dfdict)
@@ -70,7 +69,7 @@ if __name__ == "__main__":
                     # start:@start
                     # eind:@eind
     p = figure(title = "dip", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
-    p.scatter(size = 'dip', y = "tijd", x = "start", source = source, alpha = 0.3)
+    p.scatter(y = "dip", x = "start", source = source, alpha = 0.2)
     p.select_one(HoverTool).tooltips = TOOLTIPS
     #     ('branch', '@branch'),
     #     ('afzet','@afzet'),
@@ -80,5 +79,5 @@ if __name__ == "__main__":
     #     ('eind','avg.unmonth(@eind)'),
     # ]
     p.xaxis.axis_label = "starting year of the dip"
-    p.yaxis.axis_label = "duration of the dip"
+    p.yaxis.axis_label = "size of the change"
     show(p)

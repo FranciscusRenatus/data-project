@@ -38,7 +38,7 @@ def average():
 
 def titel(key):
     if key in ["A4","A5","A6"]:
-        df = pd.read_csv("../Data/Afzet")
+        df = pd.read_csv("../Data/DataFrames/Afzet.csv")
     else:
         df = pd.read_csv("../Data/Bedrijfstakken")
     return df["Title"].iloc[[str(k) for k in df["Key"]].index(key)]
