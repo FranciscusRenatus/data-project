@@ -5,5 +5,5 @@
     [X] a docs folder for the images in your documents
     [X] a separate folder containing your project's code and data
     [ ] any configuration files like .gitignore
-    [x] WEBSITE WERKT
+
 
