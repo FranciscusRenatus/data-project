@@ -35,9 +35,11 @@ def main():
 
 if __name__ == "__main__":
     impact = main()
-    impact = [x for x in impact if (x[0] > 1/4 or x[0] < -1/4) and (x[3][:6] != "346600" and x[3][:6] != "346700")]
+    impact = [x for x in impact if (x[0] > 1/16) and (x[3][:6] in ['305700', '346600', '315805', '328110', '341600', '317105', '320005', '312500', '307610', '348000', '342400', '307500'])]
+    print(len(impact))
     graph.generate([x[1] for x in impact],[x[2] for x in impact],[x[3] for x in impact])
-    output_file("../Data/HTML/relativedip.html")
+    print("done graphing")
+    output_file("../Data/HTML/industrychange.html")
     dfdict = {
         "branch":[avg.titel(x[3][:6]) for x in impact],
         "afzet":[avg.titel(x[3][-2:]) for x in impact],
@@ -45,10 +47,10 @@ if __name__ == "__main__":
         "start":[x[1] for x in impact],
         "eind":[x[2] for x in impact],
         "tijd":[abs(x[2]-x[1]) for x in impact],
-        "color":["green" if x[0] < -1/4 else "blue" for x in impact],
+        "color":["lime" if x[1] > x[2] else "red" for x in impact],
         "imgs":["../../Docs/relativedipfigures/" + x[3] + " " + "".join(ch if ch != "." else "," for ch in str(x[1])) + ".png" for x in impact]
     }
-    
+
     source = ColumnDataSource(dfdict)
     TOOLTIPS = """
         <div>
@@ -69,7 +71,7 @@ if __name__ == "__main__":
                     # start:@start
                     # eind:@eind
     p = figure(title = "dip", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
-    p.scatter(y = "dip", x = "start", source = source, alpha = 0.2)
+    p.scatter(y = "dip", x = "start", source = source, fill_color = "color")
     p.select_one(HoverTool).tooltips = TOOLTIPS
     #     ('branch', '@branch'),
     #     ('afzet','@afzet'),
@@ -78,6 +80,6 @@ if __name__ == "__main__":
     #     ('start','avg.unmonth(@start)'),
     #     ('eind','avg.unmonth(@eind)'),
     # ]
-    p.xaxis.axis_label = "starting year of the dip"
-    p.yaxis.axis_label = "size of the change"
+    p.xaxis.axis_label = "starting year of the change"
+    p.yaxis.axis_label = "relative size of the change"
     show(p)
