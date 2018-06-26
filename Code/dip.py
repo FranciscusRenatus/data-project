@@ -35,11 +35,11 @@ def main():
 
 if __name__ == "__main__":
     impact = main()
-    impact = [x for x in impact if (x[0] > 1/16) and (x[3][:6] in ['305700', '346600', '315805', '328110', '341600', '317105', '320005', '312500', '307610', '348000', '342400', '307500'])]
+    impact = [x for x in impact if (x[0] > 1/24) and (x[3][:6] != "346600" and x[3][:6] != "346700")]
     print(len(impact))
     graph.generate([x[1] for x in impact],[x[2] for x in impact],[x[3] for x in impact])
     print("done graphing")
-    output_file("../Data/HTML/industrychange.html")
+    output_file("../Data/HTML/relativechange.html")
     dfdict = {
         "branch":[avg.titel(x[3][:6]) for x in impact],
         "afzet":[avg.titel(x[3][-2:]) for x in impact],
@@ -70,8 +70,8 @@ if __name__ == "__main__":
                     # tijd:@tijd
                     # start:@start
                     # eind:@eind
-    p = figure(title = "dip", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
-    p.scatter(y = "dip", x = "start", source = source, fill_color = "color")
+    p = figure(title = "relative change", tools = "pan,hover,save,box_zoom,reset,wheel_zoom")
+    p.scatter(y = "dip", x = "start", source = source, fill_color = "color",alpha = 0,fill_alpha = 1)
     p.select_one(HoverTool).tooltips = TOOLTIPS
     #     ('branch', '@branch'),
     #     ('afzet','@afzet'),

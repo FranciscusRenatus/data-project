@@ -7,9 +7,9 @@ import nationalaverage as avg
 def generate(starten,einden,files):
     # able to make more than 20 graphs at a time without a warning
     plt.rcParams.update({'figure.max_open_warning': 0})
-
+    existingfigures = os.listdir("../Docs/relativedipfigures")
     for n,file in enumerate(files):
-        if file + " " + "".join(ch if ch != "." else "," for ch in str(starten[n])) + ".png" not in os.listdir("../Docs/relativedipfigures"):
+        if file + " " + "".join(ch if ch != "." else "," for ch in str(starten[n])) + ".png" not in existingfigures:
             path = os.path.join("../Data/DataFrames/DataFrames_Afzet_Branches", file)
             df = pd.read_csv(path)
             graph = []
