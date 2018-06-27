@@ -12,10 +12,11 @@ from bokeh.models import (
     PrintfTickFormatter,
     ColorBar,
 )
-from bokeh.plotting import figure
+from bokeh.plotting import (figure,output_file)
 from colour import Color
 
-df = pd.read_csv("../Data/DataFrames/realheatmap.csv").drop(columns="Unnamed: 0")
+df = pd.read_csv("../Data/DataFrames/relativeheatmap.csv").drop(columns="Unnamed: 0")
+output_file("../Data/HTML/relativeheatmap.html")
 b = list(df["B1"].unique())
 
 blue = Color("blue")
